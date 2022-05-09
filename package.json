@@ -6,7 +6,8 @@
   "bin": "lib/main.js",
   "type": "module",
   "scripts": {
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "build:check": "tsc -p . --noEmit"
   },
   "repository": {
     "type": "git",
