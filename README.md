@@ -2,7 +2,7 @@
 
 ## What is this
 
-**Tree* shakable **Che** cker.
+**Tree* shakable **Che**cker.
 
 check your module is tree-shakable or not, in each module and reduce bundle size!!
 
@@ -10,6 +10,8 @@ check your module is tree-shakable or not, in each module and reduce bundle size
 
 - typescript support
 - you can check in each file
+- you can check with the unique entrypoint
+- glob pattern support
 - pretty diagnostics report.
 
 
