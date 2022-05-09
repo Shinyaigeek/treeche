@@ -2,7 +2,7 @@
 
 ## What is this
 
-**Tree* shakable **Che**cker.
+**Tree** shakable **Che**cker.
 
 check your module is tree-shakable or not, in each module and reduce bundle size!!
 
