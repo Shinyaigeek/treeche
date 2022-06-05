@@ -4,7 +4,7 @@ export const compileTypescript: (content: string) => Promise<string> =
   async function (content) {
     // transpile
     const { code } = await transform(content, {
-      loader: "ts",
+      loader: "tsx",
     });
 
     return code;

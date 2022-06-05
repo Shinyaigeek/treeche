@@ -48,7 +48,7 @@ export const check: (
 
   const ast = parse(code, {
     sourceType: "module",
-    plugins: ["typescript"],
+    plugins: ["typescript", "jsx"],
   });
 
   const nodes = ast.program.body.filter((node) => {
