@@ -28,7 +28,7 @@
     "commander": "^9.0.0",
     "esbuild": "^0.14.25",
     "globby": "^13.1.1",
-    "rollup": "^1.32.1",
+    "rollup": "^2.75.6",
     "rollup-plugin-typescript2": "^0.31.2",
     "rollup-plugin-virtual": "^1.0.1",
     "tslib": "^2.3.1"
