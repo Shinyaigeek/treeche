@@ -6,10 +6,16 @@ export interface TreecheOptions {
   inputs: string[];
   excludes?: string[];
   entryPoint?: string;
+  pureFunctions?: string[];
 }
 
 export const treeche: (options: TreecheOptions) => Promise<void> =
-  async function ({ inputs: rawInputs, excludes: rawExcludes, entryPoint }) {
+  async function ({
+    inputs: rawInputs,
+    excludes: rawExcludes,
+    entryPoint,
+    pureFunctions,
+  }) {
     const targetFiles = await (async () => {
       if (entryPoint) {
         return [path.join(process.cwd(), entryPoint)];
@@ -24,7 +30,9 @@ export const treeche: (options: TreecheOptions) => Promise<void> =
     })();
 
     const results = await Promise.all(
-      targetFiles.map(async (file) => await check(file, !!entryPoint))
+      targetFiles.map(
+        async (file) => await check(file, !!entryPoint, pureFunctions ?? [])
+      )
     );
     if (results.every((result) => result.shaken)) {
       console.log("Congratulation 🎉 All files are tree-shakeable ✨");

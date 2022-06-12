@@ -14,6 +14,10 @@ function main() {
       "--entry-point <string>",
       "the unique entry point, you can check the module is tree-shakable also in node_modules "
     )
+    .option(
+      "--pure-functions <string...>",
+      "register pure function to ignore treeche checker"
+    )
     .action((inputs, options) => {
       treeche({
         inputs,

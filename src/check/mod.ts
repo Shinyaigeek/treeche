@@ -6,15 +6,17 @@ import { replaceImportWithDummy } from "../replaceImportWithDummy/mod.js";
 import { promises as fs } from "fs";
 import { compileTypescript } from "../compileTypescript/mod.js";
 import typescript from "@rollup/plugin-typescript";
+import { terser } from "rollup-plugin-terser";
 
 export const check: (
   filename: string,
-  shouldBundle: boolean
+  shouldBundle: boolean,
+  pureFunctions: string[]
 ) => Promise<{
   file: string;
   shaken: boolean;
   diagnostics: string[];
-}> = async function (filename, shouldBundle) {
+}> = async function (filename, shouldBundle, pureFunctions) {
   const fileContent = await fs.readFile(filename, "utf8");
   const bundled = await rollup({
     input: "__treeche__entry__",
@@ -51,9 +53,36 @@ export const check: (
     plugins: ["typescript", "jsx"],
   });
 
-  const nodes = ast.program.body.filter((node) => {
-    return node.type !== "ImportDeclaration";
-  });
+  const nodes = ast.program.body
+    .filter((node) => {
+      return node.type !== "ImportDeclaration";
+    })
+    .filter((node) => {
+      if (
+        node.type !== "VariableDeclaration" &&
+        node.type !== "ExpressionStatement"
+      ) {
+        return true;
+      }
+
+      if (node.type === "VariableDeclaration") {
+        return !node.declarations.every((declaration) => {
+          return (
+            declaration.init?.type === "CallExpression" &&
+            declaration.init.callee.type === "Identifier" &&
+            pureFunctions.includes(declaration.init.callee.name)
+          );
+        });
+      }
+
+      if (node.type === "ExpressionStatement") {
+        return !(
+          node.expression.type === "CallExpression" &&
+          node.expression.callee.type === "Identifier" &&
+          pureFunctions.includes(node.expression.callee.name)
+        );
+      }
+    });
 
   return {
     file: filename,
