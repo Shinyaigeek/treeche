@@ -26,7 +26,7 @@
     "@babel/traverse": "^7.17.3",
     "@types/babel__generator": "^7.6.4",
     "commander": "^9.0.0",
-    "esbuild": "^0.14.25",
+    "esbuild": "^0.15.5",
     "globby": "^13.1.1",
     "rollup": "^2.75.6",
     "rollup-plugin-typescript2": "^0.31.2",
