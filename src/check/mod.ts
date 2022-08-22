@@ -6,7 +6,6 @@ import { replaceImportWithDummy } from "../replaceImportWithDummy/mod.js";
 import { promises as fs } from "fs";
 import { compileTypescript } from "../compileTypescript/mod.js";
 import typescript from "@rollup/plugin-typescript";
-import { terser } from "rollup-plugin-terser";
 
 export const check: (
   filename: string,
