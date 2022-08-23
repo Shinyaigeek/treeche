@@ -1,6 +1,6 @@
 {
   "name": "treeche",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tree-Shakable checker for JavaScript/TypeScript application",
   "main": "lib/main.js",
   "bin": "lib/main.js",
