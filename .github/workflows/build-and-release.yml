@@ -22,10 +22,16 @@ jobs:
         with:
           node-version: 16.x
           registry-url: "https://npm.pkg.github.com"
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7.1.9
+          run_install: false
       - name: install
-        run: yarn
+        run: pnpm i 
       - name: build
-        run: yarn build
+        run: pnpm build
       # if unpublished, publish with current version
       - name: publish
         run: |
