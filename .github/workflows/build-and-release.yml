@@ -34,6 +34,7 @@ jobs:
         run: pnpm build
       # if unpublished, publish with current version
       - name: publish
+        working-directory: ./packages/node-cli
         run: |
           npx can-npm-publish --verbose && npm publish || echo "Does not publish"
         env:

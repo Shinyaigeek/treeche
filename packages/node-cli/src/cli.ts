@@ -1,5 +1,5 @@
 import { Command } from "commander";
-import { treeche, TreecheOptions } from "./treeche/mod.js";
+import { treeche, TreecheOptions } from "treeche-core/src/mod";
 
 function main() {
   const program = new Command();
