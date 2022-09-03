@@ -1,5 +1,5 @@
 {
-  "name": "treeche",
+  "name": "treeche-monorepo-root",
   "version": "0.1.5",
   "description": "Tree-Shakable checker for you JavaScript/TypeScript application",
   "main": "lib/main.js",
