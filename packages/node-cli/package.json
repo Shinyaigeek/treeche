@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p .",
+    "build:check": "tsc -p . --noEmit",
+    "publish": "npm publish"
   },
   "dependencies": {
     "commander": "^9.0.0",
