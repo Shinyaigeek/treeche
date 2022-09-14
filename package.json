@@ -1,13 +1,14 @@
 {
-  "name": "treeche",
-  "version": "0.1.1",
-  "description": "Tree-Shakable checker for JavaScript/TypeScript application",
+  "name": "treeche-monorepo-root",
+  "version": "0.1.5",
+  "description": "Tree-Shakable checker for you JavaScript/TypeScript application",
   "main": "lib/main.js",
   "bin": "lib/main.js",
   "type": "module",
   "scripts": {
-    "build": "tsc -p .",
-    "build:check": "tsc -p . --noEmit"
+    "build": "pnpm --filter ./packages/node-cli build",
+    "build:check": "pnpm --filter ./packages/node-cli build:check",
+    "publish:node-cli": "pnpm --filter ./packages/node-cli publish"
   },
   "repository": {
     "type": "git",
@@ -20,24 +21,9 @@
     "url": "https://github.com/Shinyaigeek/treeche/issues"
   },
   "homepage": "https://github.com/Shinyaigeek/treeche#readme",
-  "dependencies": {
-    "@babel/generator": "^7.17.3",
-    "@babel/parser": "^7.17.3",
-    "@babel/traverse": "^7.17.3",
-    "@types/babel__generator": "^7.6.4",
-    "commander": "^9.0.0",
-    "esbuild": "^0.15.5",
-    "globby": "^13.1.1",
-    "rollup": "^2.75.6",
-    "@rollup/plugin-typescript": "^8.3.4",
-    "rollup-plugin-typescript2": "^0.31.2",
-    "rollup-plugin-virtual": "^1.0.1",
-    "tslib": "^2.3.1",
+  "devDependencies": {
+    "@types/node": "^17.0.21",
     "typescript": "^4.6.2"
   },
-  "devDependencies": {
-    "@types/babel__traverse": "^7.14.2",
-    "@types/estree": "0.0.51",
-    "@types/node": "^17.0.21"
-  }
+  "packageManager": "pnpm@7.1.9"
 }
