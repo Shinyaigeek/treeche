@@ -30,6 +30,8 @@ jobs:
           run_install: false
       - name: install
         run: pnpm i 
+      - name: test
+        run: pnpm test
       - name: build
         run: pnpm build
       # if unpublished, publish with current version

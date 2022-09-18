@@ -31,3 +31,4 @@ jobs:
         run_install: false
     - run: pnpm i
     - run: pnpm build:check
+    - run: pnpm test
