@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitest": "^0.23.4"
+    "vitest": "^0.23.4",
+    "treeche-core": "workspaces:../treeche-core"
   }
 }
