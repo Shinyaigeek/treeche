@@ -53,10 +53,10 @@ importers:
 
   packages/tests:
     specifiers:
-      treeche-core: workspaces:../treeche-core
+      treeche-core: workspace:treeche-core
       vitest: ^0.23.4
     devDependencies:
-      treeche-core: link:workspaces:../treeche-core
+      treeche-core: link:../core
       vitest: 0.23.4
 
 packages:
