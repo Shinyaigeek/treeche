@@ -1,6 +1,6 @@
 import { parse } from "@babel/parser";
-import _traverse from "@babel/traverse";
-import _generate from "@babel/generator";
+import traverse from "@babel/traverse";
+import generate from "@babel/generator";
 
 export const replaceImportWithDummy: (content: string) => string = function (
   content
@@ -9,9 +9,6 @@ export const replaceImportWithDummy: (content: string) => string = function (
     sourceType: "module",
     plugins: ["typescript"],
   });
-
-  // TODO babel/traverse does not support native ESM :cry:
-  const traverse = (_traverse as any).default as typeof _traverse;
 
   traverse(ast, {
     ImportDeclaration(path) {
@@ -42,9 +39,6 @@ export const replaceImportWithDummy: (content: string) => string = function (
       }
     },
   });
-
-  // TODO babel/generate does not support native ESM :cry:
-  const generate = (_generate as any).default as typeof _generate;
 
   const { code } = generate(ast);
   return code;
