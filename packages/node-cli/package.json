@@ -3,6 +3,7 @@
   "version": "0.1.7",
   "description": "",
   "main": "lib/cli.js",
+  "bin": "lib/cli.js",
   "type": "module",
   "scripts": {
     "build": "tsc -p .",
