@@ -1,19 +1,20 @@
 {
   "name": "treeche",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "",
   "main": "lib/cli.js",
+  "bin": "lib/cli.js",
   "type": "module",
   "scripts": {
     "build": "tsc -p .",
     "build:check": "tsc -p . --noEmit",
-    "publish": "npm publish"
+    "publish-module": "npm publish"
   },
   "dependencies": {
     "commander": "^9.0.0",
-    "treeche-core": "workspace:treeche-core"
+    "treeche-core": "0.1.8"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["tree-shake", "bundler", "rollup", "bundle size", "side effect", "performance"],
+  "author": "@Shinyaigeek/Shinobu Hayashi",
+  "license": "MIT"
 }

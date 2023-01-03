@@ -1,13 +1,14 @@
 {
   "name": "treeche-core",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "",
   "type": "module",
   "main": "lib/mod.js",
   "types": "src/mod.ts",
   "scripts": {
     "build": "tsc -p .",
-    "build:check": "tsc -p . --noEmit"
+    "build:check": "tsc -p . --noEmit",
+    "publish-module": "npm publish"
   },
   "dependencies": {
     "@babel/generator": "^7.17.3",
@@ -27,7 +28,7 @@
     "@types/babel__traverse": "^7.14.2",
     "@types/estree": "0.0.51"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["tree-shake", "bundler", "rollup", "bundle size", "side effect", "performance"],
+  "author": "@Shinyaigeek/Shinobu Hayashi",
+  "license": "MIT"
 }

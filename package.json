@@ -1,6 +1,6 @@
 {
   "name": "treeche-monorepo-root",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "Tree-Shakable checker for you JavaScript/TypeScript application",
   "main": "lib/main.js",
   "bin": "lib/main.js",
@@ -8,16 +8,16 @@
   "scripts": {
     "build": "pnpm --filter '*' build",
     "build:check": "pnpm --filter '*' build:check",
-    "publish:node-cli": "pnpm --filter ./packages/node-cli publish",
+    "publish-modules": "pnpm --filter '*' publish-module",
     "test": "pnpm --filter ./packages/tests test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shinyaigeek/treeche.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["tree-shake", "bundler", "rollup", "bundle size", "side effect", "performance"],
+  "author": "@Shinyaigeek/Shinobu Hayashi",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Shinyaigeek/treeche/issues"
   },
