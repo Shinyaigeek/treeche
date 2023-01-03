@@ -1,6 +1,6 @@
 {
   "name": "treeche",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "",
   "main": "lib/cli.js",
   "bin": "lib/cli.js",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "commander": "^9.0.0",
-    "treeche-core": "0.1.7"
+    "treeche-core": "0.1.8"
   },
   "keywords": ["tree-shake", "bundler", "rollup", "bundle size", "side effect", "performance"],
   "author": "@Shinyaigeek/Shinobu Hayashi",
