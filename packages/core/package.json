@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsc -p .",
     "build:check": "tsc -p . --noEmit",
-    "publish": "npm publish"
+    "publish-module": "npm publish"
   },
   "dependencies": {
     "@babel/generator": "^7.17.3",

@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc -p .",
     "build:check": "tsc -p . --noEmit",
-    "publish": "npm publish"
+    "publish-module": "npm publish"
   },
   "dependencies": {
     "commander": "^9.0.0",

@@ -8,7 +8,7 @@
   "scripts": {
     "build": "pnpm --filter '*' build",
     "build:check": "pnpm --filter '*' build:check",
-    "publish:node-cli": "pnpm --filter ./packages/node-cli publish",
+    "publish-modules": "pnpm --filter '*' publish-module",
     "test": "pnpm --filter ./packages/tests test"
   },
   "repository": {

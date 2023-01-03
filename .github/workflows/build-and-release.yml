@@ -38,6 +38,6 @@ jobs:
       - name: publish
         working-directory: ./packages/node-cli
         run: |
-          npx can-npm-publish --verbose && npm publish || echo "Does not publish"
+          npx can-npm-publish --verbose && pnpm publish-modules || echo "Does not publish"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
