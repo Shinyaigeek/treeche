@@ -15,9 +15,9 @@
     "type": "git",
     "url": "git+https://github.com/Shinyaigeek/treeche.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["tree-shake", "bundler", "rollup", "bundle size", "side effect", "performance"],
+  "author": "@Shinyaigeek/Shinobu Hayashi",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Shinyaigeek/treeche/issues"
   },

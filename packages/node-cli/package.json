@@ -13,7 +13,7 @@
     "commander": "^9.0.0",
     "treeche-core": "workspace:treeche-core"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["tree-shake", "bundler", "rollup", "bundle size", "side effect", "performance"],
+  "author": "@Shinyaigeek/Shinobu Hayashi",
+  "license": "MIT"
 }
