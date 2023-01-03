@@ -46,7 +46,7 @@ importers:
   packages/node-cli:
     specifiers:
       commander: ^9.0.0
-      treeche-core: workspace:treeche-core
+      treeche-core: 0.1.8
     dependencies:
       commander: 9.4.0
       treeche-core: link:../core
