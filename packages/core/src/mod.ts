@@ -1,1 +1,1 @@
-export { treeche, type TreecheOptions } from "./treeche/mod";
+export { treeche, type TreecheOptions } from "./treeche/mod.js";
