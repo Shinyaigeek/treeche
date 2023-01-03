@@ -6,8 +6,8 @@
   "bin": "lib/main.js",
   "type": "module",
   "scripts": {
-    "build": "pnpm --filter ./packages/node-cli build",
-    "build:check": "pnpm --filter ./packages/node-cli build:check",
+    "build": "pnpm --filter '*' build",
+    "build:check": "pnpm --filter '*' build:check",
     "publish:node-cli": "pnpm --filter ./packages/node-cli publish",
     "test": "pnpm --filter ./packages/tests test"
   },
